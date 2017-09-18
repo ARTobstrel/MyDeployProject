@@ -70,7 +70,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'MyDeployProject.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -120,4 +119,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
+#TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
