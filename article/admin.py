@@ -12,5 +12,6 @@ class ArticleAdmin(admin.ModelAdmin):
     """устанавливает какие поля будут видны в административной панели"""
     fields = ['article_title', 'article_text', 'article_date']
     inlines = [ArticleInLine] #показывает, то будет отображено снизу под нашими полями
+    list_filter = ['article_date'] #show filter into Django admin`s panel
 
 admin.site.register(Article, ArticleAdmin)
