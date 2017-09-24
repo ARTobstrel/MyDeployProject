@@ -1,0 +1,39 @@
+{%  load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blog</title>
+        <link href="{% static 'style.css' %}" rel="stylesheet">
+        <style>
+        body{
+            background: url("{% static 'whiteback.jpg' %}");
+            background-position: center;
+        }
+        .text{
+            text-align: center;
+        }
+        .transparent{
+            background-color: rgba(20, 40, 10, 0.3);
+        }
+    </style>
+
+    </head>
+
+    <body>
+        <div id='container'>
+            <div id="header">
+                <span id="site_name">HTML and CSS for Web-Developers</span>
+            </div>
+
+            <div id="center_block">
+                {% block content %}{% endblock %}
+            </div>
+
+            <div id="footer">
+                Footer
+            </div>
+        </div>
+    </body>
+</html>
