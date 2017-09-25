@@ -1,7 +1,7 @@
 body{
     margin: 0;
-    padding: 0;
-    font: 0.92em Arial, sans-serif;
+    padding: 1%;
+    font: normal 100% "Trebuchet MS", Arial, Helvetica, sans-serif;
     line-height: 1.4;
     background: white;
     color: black;
@@ -13,14 +13,14 @@ div{
 
 #container{
     margin: 0 auto;
-    width: 1000px;
-    min-height: 700px;
+    max-width: 80%;
+    max-height: 100%;
 }
 
 #header{
-    width: 980px;
-    height: 70px;
-    padding: 30px 0 0 20px;
+    max-width: 100%;
+    min-height: 70px;
+    padding: 30px 10px 10px 10px;
 }
 
 #left_block{
@@ -31,8 +31,8 @@ div{
 
 #center_block{
     float: left;
-    width: 594px;
-    min-height: 494px;
+    width: 100%;
+    height: 1000px;
 }
 
 #right_block{
@@ -44,102 +44,10 @@ div{
 #footer{
     clear: both;
     width: 100%;
-    height: 100px;
+    min-height: 50px;
 }
 
 #site_name{
     font-size: 36px;
-    color: #ccc;
-}
-
-.link_with_class{
-    text-decoration: none;
-}
-
-.blok500{
-    height: 500px;
-    width: 100%;
-}
-
-.blok25{
-    height: 25px;
-    width: 100%;
-}
-
-.article_block{
-    border: 1px dotted;
-    float: left;
-}
-
-.img_with_right_text{
-    float: left;
-    margin: 10px;
-}
-
-.article_title{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.img_with_left_text{
-    float: right;
-    margin: 10px;
-}
-
-.block_list div{
-    float: left;
-    width: 185px;
-    margin: 0px 5px 0px 5px;
-}
-
-.block_list2 div{
-    margin: 0px auto;
-    width: 250px;
-}
-.clr{
-    clear:both;
-}
-
-.block_list2 li{
-    list-style-image: url("../images/microsoft.png");
-}
-
-.inline_list li{
-    /*display: inline;*/
-    float: left;
-    margin: 30px;
-}
-
-#special_table{
-    width: 100%;
-    background: #FFF;
-    color: #000;
-    border-spacing: 1px; /* Растояние между ячейками */
-}
-
-#special_table caption{
-    font-size: 18px;
-    font-weight: bold;
-    border: 1px dotted;
-}
-
-#special_table td{
-    background: maroon;
-    color: yellow;
-    padding: 5px;
-}
-
-.sr_unput{
-    background-color: #FFFFFF;
-    background-image: url("../images/user32.png");
-    background-position: 95% 50%;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 200px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    font-family: Arial;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: bold;
+    color: black;
 }
