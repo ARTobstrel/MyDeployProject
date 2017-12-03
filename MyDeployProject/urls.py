@@ -21,5 +21,5 @@ from MyDeployProject import settings
 urlpatterns = [
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('article.urls')),
+    url(r'^', include('article.urls', namespace='main')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
