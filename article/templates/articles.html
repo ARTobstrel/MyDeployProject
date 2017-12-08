@@ -1,5 +1,40 @@
 {% extends 'main.html' %}
 
+
+{% block title %}Articles{% endblock %}
+
 {% block content %}
-    <h1>Hello, Artem!</h1>
+
+<div class="container" style="padding: 20px">
+    {% for article in articles %}
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <h6>Дата публикации: {{ article.article_date }}</h6>
+                <h3><a href="{% url 'main:article' article.id %}">{{ article.article_title }}</a></h3>
+            </div>
+        </div>
+    {% endfor %}
+
+{#    Пагинация#}
+    <nav>
+        <div class="large-3 large-centered columns">
+            <ul class="pagination">
+                {% if articles.has_previous %}
+                    <li class="arrow-only"><a href="{% url 'main:articles_page' articles.previous_page_number %}">&laquo;</a></li>
+                {% endif %}
+                {% for page in articles.paginator.page_range %}
+                    {% if page == articles.number %}
+                        <li class="current"><a href="{% url 'main:articles_page' page %}">{{ page }}</a></li>
+                    {% else %}
+                        <li><a href="{% url 'main:articles_page' page %}">{{ page }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if articles.has_next %}
+                    <li class="arrow-only"><a href="{% url 'main:articles_page' articles.next_page_number %}">&raquo;</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+</div>
+
 {% endblock %}
