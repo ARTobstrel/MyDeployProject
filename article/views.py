@@ -1,6 +1,6 @@
 from django.contrib import auth
 from django.core.paginator import Paginator
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404
 from article.models import Article
 
 #My Views
@@ -20,5 +20,5 @@ def articles(request, page_number=1):
 def article(request, art_id=1):
     """Выбранная статья"""
     args = {}
-    args['article'] = Article.objects.get(id=art_id)
+    args['article'] = get_object_or_404(Article, id=art_id)
     return render_to_response('article.html', args)
