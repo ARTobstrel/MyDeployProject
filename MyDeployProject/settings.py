@@ -25,7 +25,7 @@ SECRET_KEY = 'fa8a8!9eu=&yb%!*8up(@y!63bn%s96=s0&b@(_qve)zc!55+#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -142,3 +142,32 @@ CKEDITOR_CONFIGS = {
 }
 
 #TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
+
+
+#Настройки django-bootstrap3
+BOOTSTRAP3 = {
+    'include_jquery': True,
+    }
+
+# Настройка Heroku
+if os.getcwd() == '/app':
+    import dj_database_url
+
+    DATABASES = {
+        'default': dj_database_url.config(default='postgres://localhost')
+    }
+
+    # Поддержка заголовка 'X-Forwarded-Proto' для request.is_secure().
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+    # Хостом проекта может быть только Heroku.
+    ALLOWED_HOSTS = ['*']
+
+    DEBUG = False
+
+    # Конфигурация статических ресурсов
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    STATIC_ROOT = 'staticfiles'
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+    )

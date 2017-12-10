@@ -1,0 +1,1 @@
+web: gunicorn MyDeployProject.wsgi --log-file -
