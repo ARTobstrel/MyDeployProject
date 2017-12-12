@@ -146,7 +146,7 @@ CKEDITOR_CONFIGS = {
 
 #Настройки django-bootstrap3
 BOOTSTRAP3 = {
-    'include_jquery': True,
+    'include_jquery': False,
     }
 
 # Настройка Heroku
