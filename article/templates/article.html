@@ -1,7 +1,10 @@
 {% extends 'main.html' %}
+{% load staticfiles %}
 
 
-{% block title %}{{ article.article_title }}{% endblock %}
+
+{% block title %}{{ article.article_title }}{% endblock title %}
+
 {% block content %}
 
     <div class="container" style="padding: 20px">
@@ -15,7 +18,18 @@
                 {% autoescape off %}{{ article.article_text }}{% endautoescape %}
             </div>
         </div>
+        <div>
+            <a href="{% url 'main:articles' %}" class="btn btn-info" role="button" data-toggle="tooltip" title="Назад" data-placement="right"><img src="{% static 'back.gif' %}"></a>
+        </div>
 
     </div>
 
-{% endblock %}
+    <!-- Это код позволяет отображать подсказки при наведении курсора -->
+    <script>
+        $(document).ready (function (){
+            $('[data-toggle="tooltip"]').tooltip ();
+        });
+    </script>
+
+{% endblock content %}
+
