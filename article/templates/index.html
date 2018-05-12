@@ -1,9 +1,9 @@
 {% extends 'main.html' %}
 
 
-{% block title %}About{% endblock %}
+{% block title %}{{ mainpage.page_title }}{% endblock %}
 {% block content %}
-    <h1>Hello, Artem!</h1>
-    <br>
-    <h3>Здесь будет находится главная страница моего блога. Здесь будет раположен текст приветствия и общее описание блога.</h3>
+    <div class="container">
+        {% autoescape off %}{{ mainpage.start_text }}{% endautoescape %}
+    </div>
 {% endblock %}

@@ -1,5 +1,6 @@
 from django.contrib import admin
-from article.models import Article, Comments
+from article.models import Article, Comments, Mainpage
+
 
 # Register your models here.
 
@@ -15,3 +16,4 @@ class ArticleAdmin(admin.ModelAdmin):
     list_filter = ['article_date'] #show filter into Django admin`s panel
 
 admin.site.register(Article, ArticleAdmin)
+admin.site.register(Mainpage)

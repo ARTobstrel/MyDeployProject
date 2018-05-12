@@ -1,12 +1,15 @@
 from django.contrib import auth
 from django.core.paginator import Paginator
 from django.shortcuts import render_to_response, get_object_or_404
-from article.models import Article
+from article.models import Article, Mainpage
+
 
 #My Views
 def index(request):
     """Основная страница"""
-    return render_to_response('index.html')
+    args = {}
+    args['mainpage'] = get_object_or_404(Mainpage, id=1)
+    return render_to_response('index.html', args)
 
 def articles(request, page_number=1):
     """Список всех статей"""
