@@ -161,7 +161,7 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
     # Хостом проекта может быть только Heroku.
-    ALLOWED_HOSTS = ['mydeployproject.herokuapp.com']
+    ALLOWED_HOSTS = ['blogitwin.herokuapp.com']
 
     DEBUG = False
 
