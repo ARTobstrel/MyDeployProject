@@ -14,10 +14,11 @@
     <!-- подключение bootstrap -->
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    {% static "style.css" %}
 
 </head>
 
-<body>
+<body style="background: #eeeeee">
 
 <div class="navbar navbar-default navbar-fixed-top" style="background-color: #689ecc; border-color: #181dae">
     <div class="container">
@@ -29,7 +30,7 @@
             </button>
             <a class="navbar-brand" href="{% url 'main:index' %}">Logo Company</a>
             <a class="navbar-brand" href="{% url 'main:articles' %}">My topics</a>
-{#            <a class="navbar-brand" href="admin/">Admin Panel</a>#}
+            <a class="navbar-brand" href="admin/">Admin Panel</a>
         </div>
 
         <div class="navbar-collapse collapse">
@@ -38,7 +39,8 @@
                     {#выпадающее меню#}
                     <div class="dropdown">
                         <button class="btn btn-info dropdown-toggle"
-                                data-toggle="dropdown" style="margin: 8px;">Usefull sources<span class="caret"></span></button>
+                                data-toggle="dropdown" style="margin: 8px;">Usefull sources<span class="caret"></span>
+                        </button>
                         <ul class="dropdown-menu">
                             <li class="dropdown-header" style="color: #c7254e">Разработка</li>
                             <li><a href="https://github.com/">GitHub</a></li>
@@ -58,16 +60,16 @@
                 </li>
             </ul>
 
-{#            панель авторизации#}
-{#            <form class="navbar-form navbar-right">#}
-{#                <div class="form-group">#}
-{#                    <input type="text" placeholder="Email" class="form-control">#}
-{#                </div>#}
-{#                <div class="form-group">#}
-{#                    <input type="password" placeholder="password" class="form-control">#}
-{#                </div>#}
-{#                <button type="submit" class="btn btn-success">Go</button>#}
-{#            </form>#}
+            {#            панель авторизации#}
+            {#            <form class="navbar-form navbar-right">#}
+            {#                <div class="form-group">#}
+            {#                    <input type="text" placeholder="Email" class="form-control">#}
+            {#                </div>#}
+            {#                <div class="form-group">#}
+            {#                    <input type="password" placeholder="password" class="form-control">#}
+            {#                </div>#}
+            {#                <button type="submit" class="btn btn-success">Go</button>#}
+            {#            </form>#}
         </div>
     </div>
 </div>
@@ -79,14 +81,10 @@
 </div>
 
 
-<footer class="navbar row-fluid">
-    <div class="navbar-inner">
-        <div class="container">
-            <p>&copy; Все права защищены 2017</p>
-            <img src='https://bettercodehub.com/edge/badge/ARTobstrel/MyDeployProject?branch=master'>
-        </div>
-    </div>
-</footer>
+<div class="container" style="position: fixed; bottom: 20px;">
+    <p>&copy; Все права защищены 2017</p>
+    <img src='https://bettercodehub.com/edge/badge/ARTobstrel/MyDeployProject?branch=master'>
+</div>
 
 
 <!-- jQuery -->

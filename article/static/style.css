@@ -42,9 +42,10 @@ div{
 }
 
 #footer{
+
     clear: both;
     width: 100%;
-    min-height: 50px;
+    max-height: 50px;
 }
 
 #site_name{
